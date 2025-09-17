@@ -5,7 +5,7 @@ from kafka import KafkaProducer
 # Create a Kafka producer instance
 # The value_serializer ensures the message is a JSON string
 producer = KafkaProducer(
-    bootstrap_servers='localhost:9092',
+    bootstrap_servers='kafka:29092',
     value_serializer=lambda v: json.dumps(v).encode('utf-8')
 )
 
