@@ -5,7 +5,7 @@ from kafka import KafkaConsumer
 # Create a Kafka consumer instance
 consumer = KafkaConsumer(
     'bank_transactions',
-    bootstrap_servers='kafka:29092',
+    bootstrap_servers='kafka:9092',
     value_deserializer=lambda x: json.loads(x.decode('utf-8')),
     auto_offset_reset='earliest', # Start from the beginning of the topic
     group_id='bank-group'
